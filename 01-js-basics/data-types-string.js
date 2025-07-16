@@ -88,4 +88,13 @@ console.log(tersi);
 
 //ornek palindrome kontrolü - Bir kelimenin tersten de aynı olup olmadığını kontrol eden kod:
 
-const kelime4 = "kayak";
+const duzkelime = "kayak";
+const terskelime = duzkelime
+  .split("")
+  .reverse()
+  .join("");
+
+console.log(duzkelime);
+console.log(terskelime);
+
+console.log(duzkelime === terskelime);
