@@ -65,3 +65,49 @@ ben.hobiler.push("kodlama");
 console.log(ben);
 
 console.log(`toplam ${ben.hobiler.length} hobi var`);
+
+//
+const kitap = {
+  baslik: "kuslar",
+  yazar: "maria",
+  sayfaSayisi: "123",
+  okunuyorMu: false,
+};
+
+console.log(`kitapın adı ve yazarı ${kitap.baslik} ${kitap.yazar}`);
+
+kitap.sayfaSayisi = "422";
+console.log(kitap);
+
+kitap.okunuyorMu = true;
+
+//
+const araba = {
+  marka: "tesla",
+  model: "model32",
+  yil: "2024",
+  renkler: ["kirmizi", "beyaz", "mavi", "pembe"],
+};
+
+araba.renkler.push("siyah");
+
+const araba_yas = 2025 - araba.yil;
+console.log(`arabanın yasi: ${araba_yas}`);
+
+//
+
+const film = {
+  ad: "prens",
+  yonetmen: "giray",
+  sure: "250dk",
+  oyuncular: ["ali", "veli", "selim"],
+  puan: 8.5,
+  izlenmeSayisi: 1000000,
+};
+
+film.oyuncular.push("ayşe");
+if (film.puan > 7) console.log(`izlemeye deger`);
+else console.log("bosa zaman");
+
+if (film.sure > 120) console.log("film uzun");
+else console.log("kisa film");
