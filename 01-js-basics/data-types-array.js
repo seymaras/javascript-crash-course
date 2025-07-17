@@ -51,3 +51,36 @@ console.log(`dizinin uzunlugu: ${uzunluk}`);
 
 sayi1.reverse();
 console.log(sayi1);
+
+//map() metodu
+
+//const yeniDizi = eskiDizi.map((value, index) => {
+//  return istenilen;
+//});
+
+//sayıları ikiye carpma
+
+const sayilar2 = [1, 2, 3, 4, 5];
+
+const carpilmis = sayilar2.map((sayi) => {
+  return sayi * 2;
+});
+console.log(carpilmis);
+
+//büyük harf yapma
+
+const isim = ["mehmet", "seyma", "amine", "beyza"];
+
+const buyukharf = isim.map((isim) => {
+  return isim.toLocaleUpperCase();
+});
+console.log(buyukharf);
+
+//index kullanımı
+
+const isim3 = ["mehmet", "seyma", "amine", "beyza"];
+
+const numarali = isim3.map((isim3, index) => {
+  return `${index + 1}. ${isim3}`;
+});
+console.log(numarali);
