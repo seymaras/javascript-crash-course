@@ -84,3 +84,32 @@ const numarali = isim3.map((isim3, index) => {
   return `${index + 1}. ${isim3}`;
 });
 console.log(numarali);
+
+//filter() metodu
+const kisiler = [
+  { ad: "Rana", aktif: true },
+  { ad: "Şeyma", aktif: false },
+  { ad: "Ayşe", aktif: true },
+];
+
+const aktifler = kisiler.filter((kisi) => {
+  return kisi.aktif === true;
+});
+
+console.log(aktifler);
+// [{ ad: "Rana", aktif: true }, { ad: "Ayşe", aktif: true }]
+
+//find()
+
+const kisiler7 = [
+  { ad: "Rana", yas: 21 },
+  { ad: "Şeyma", yas: 22 },
+  { ad: "Ayşe", yas: 25 },
+];
+
+const aranan = kisiler7.find((kisi) => {
+  return kisi.ad === "Şeyma";
+});
+
+console.log(aranan);
+// { ad: "Şeyma", yas: 22 }
