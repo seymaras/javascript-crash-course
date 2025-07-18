@@ -61,3 +61,35 @@ for (let i = 0; i < ciftsayi.length; i++) {
     console.log("tek sayi");
   }
 }
+
+//cift
+
+const ciftsayi2 = [5, 8, 13, 24, 19, 6];
+
+for (let i = 0; i < ciftsayi2.length; i++) {
+  if (ciftsayi2[i] % 2 === 0) {
+    console.log("cift sayi");
+  } else {
+    console.log("tek");
+  }
+}
+
+//
+
+const sayilarr = [5, 8, 3, 6, 9, 12];
+
+for (const sayi of sayilarr) {
+  if (sayi % 2 === 0) {
+    console.log(`cift sayiiii ${sayi}`);
+  }
+}
+
+//
+
+const sayilarrr = [2, 5, 12, 88, 4, 6, 32];
+
+sayilarrr.forEach((sayi) => {
+  if (sayi % 2 === 0) {
+    console.log(`cift sayi: ${sayi}`);
+  }
+});
