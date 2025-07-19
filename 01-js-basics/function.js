@@ -132,4 +132,28 @@ const buyukHarf = (isim4) => {
 };
 console.log(buyukHarf("kahveyi seviyorum"));
 
-//
+// iki sayıdan büyük olanı bulma
+
+const enBuyuguBul = (a, b) => {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+};
+console.log(enBuyuguBul(4, 7));
+
+//hesaplama yapan fonksiyon
+const hesapla3 = (a, b, islem) => {
+  if (islem === "toplama") {
+    return a + b;
+  } else if (islem === "cikarma") {
+    return a - b;
+  } else if (islem === "carpma") {
+    return a * b;
+  } else {
+    return a / b;
+  }
+};
+
+console.log(hesapla3(4, 7, "carpma"));
