@@ -36,4 +36,16 @@ const kisi = {
 
 yazdir(kisi);
 
-//
+//| Durum                          | Destructuring Uygun mu? | Nasıl kullanılır?       |
+//| ------------------------------ | ----------------------- | ----------------------- |
+//| Objeden veri çekeceksen        | ✅ Evet                  | `{ key1, key2 } = obje` |
+//| Diziden eleman çekeceksen      | ✅ Evet                  | `[a, b] = dizi`         |
+//| Fonksiyon parametresi obje ise | ✅ Evet                  | `function({ a, b }) {}` |
+//| Sadece 1-2 veri lazımken       | ✅ Harika olur           | Atlayarak alabilirsin   |
+
+const kisi1 = {
+  ad: "rana",
+  sehir2: "eskisehir",
+};
+const { ad, sehir2 } = kisi1;
+console.log(kisi1);
