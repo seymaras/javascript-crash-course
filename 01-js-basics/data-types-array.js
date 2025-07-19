@@ -148,3 +148,24 @@ const ortalamahesapla =
 console.log(`Ortalama: ${ortalamahesapla}`);
 
 //
+const notlar2 = [70, 80, 54, 90];
+
+let toplam = 0;
+for (let i = 0; i < notlar2.length; i++) {
+  toplam += notlar2[i];
+}
+const ortalama = toplam / notlar2.length;
+
+console.log(`Ortalama: ${ortalama}`);
+
+//
+
+const notlar3 = [34, 56, 78, 23, 65];
+
+let toplam2 = 0;
+
+for (const not of notlar3) {
+  toplam += not;
+}
+const ortalama2 = toplam / notlar.length;
+console.log(`ortalama: ${ortalama2}`);
