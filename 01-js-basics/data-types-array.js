@@ -113,3 +113,38 @@ const aranan = kisiler7.find((kisi) => {
 
 console.log(aranan);
 // { ad: "Şeyma", yas: 22 }
+
+//------------------ÖRNEKLER------------------------
+
+const sayilar3 = [1, 2, 3, 4, 5];
+const tersi = sayilar3.reverse();
+console.log(tersi);
+
+//
+const dizi = [4, 7, 10, 15, 22, 3];
+
+const tekSayilar = dizi.filter((sayi) => sayi % 2 == 1); //sayi%2 !==0
+console.log(tekSayilar);
+
+//
+const sayilar = [12, 3, 43, 9, 2];
+
+const enKucuk = Math.min(...sayiler);
+const enBuyuk3 = Math.max(...sayilar);
+
+console.log(`en kücük: ${enKucuk}`);
+console.log(`en büyük: ${enBuyuk3}`);
+
+//| `Math.min(...arr)`    | Dizi elemanlarını tek tek verir                                                                     |
+//| `console.log(...arr)` | Her elemanı ayrı yazar                                                                              |
+//| `[...arr]`            | Diziyi **kopyalamak** için                                                                          |
+//| `[...arr1, ...arr2]`  | İki diziyi birleştirmek için                                                                        |
+//| `function(...args)`   | Bir fonksiyona **istediğin kadar parametre** almak için (rest parameter, farklı ama benzer görünür) |
+
+const notlar = [70, 80, 54, 90];
+
+const ortalamahesapla =
+  notlar.reduce((toplam, not) => toplam + not, 0) / notlar.length;
+console.log(`Ortalama: ${ortalamahesapla}`);
+
+//
