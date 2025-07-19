@@ -49,3 +49,22 @@ const kisi1 = {
 };
 const { ad, sehir2 } = kisi1;
 console.log(kisi1);
+
+//--------------------Örnek-------------------
+
+//1
+const ogrenci = {
+  ad3: "Rana",
+  yas3: 22,
+  hobiler: ["kitap", "yüzme", "kodlama"],
+};
+const { ad3, yas3, hobiler } = ogrenci;
+
+console.log(ogrenci);
+
+//2
+const use = {
+  ad4: "seyma",
+  mail2: "hello@gmsil.com",
+};
+const { ad4, mail2 } = use;
