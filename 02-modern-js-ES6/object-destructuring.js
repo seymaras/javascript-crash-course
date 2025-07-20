@@ -81,12 +81,12 @@ console.log(kiraz);
 //
 
 const kisi2 = {
-    isim : "Rana",
-    yas: 23;
-    okul1:"YTÜ"
+  isim: "Rana",
+  yas: 23,
+  okul1: "YTÜ",
 };
 
-function kisiBilgisi({isim,yas,okul1}){
-    console.log(`${isim}i ${yas} yasında`)
+function kisiBilgisi({ isim, yas, okul1 }) {
+  console.log(`${isim}i ${yas} yasında`);
 }
 kisiBilgisi(kisi2);
