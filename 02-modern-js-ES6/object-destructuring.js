@@ -68,3 +68,25 @@ const use = {
   mail2: "hello@gmsil.com",
 };
 const { ad4, mail2 } = use;
+
+//3
+const meyveler1 = ["elma", "armut", "kiraz", "cilek"];
+const [, , kiraz] = meyveler1;
+
+console.log(kiraz);
+
+//, → ilk eleman ("elma") atlandı
+//, → ikinci eleman ("armut") da atlandı
+//muz → üçüncü eleman "muz" değişkenine atandı ✅
+//
+
+const kisi2 = {
+    isim : "Rana",
+    yas: 23;
+    okul1:"YTÜ"
+};
+
+function kisiBilgisi({isim,yas,okul1}){
+    console.log(`${isim}i ${yas} yasında`)
+}
+kisiBilgisi(kisi2);
