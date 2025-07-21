@@ -61,3 +61,10 @@ const ekBilgi = { sehir: "istanbul", tatli: "sütlac" };
 const profil = { ...user1, ...ekBilgi };
 
 console.log(profil);
+
+// spread stringe parcalma
+
+const isim = "Rana";
+const harfler = [...isim];
+
+console.log(harfler);
