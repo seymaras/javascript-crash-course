@@ -41,4 +41,23 @@ const [ilk, ...digerleri] = [1, 2, 3, 4];
 console.log(ilk);
 console.log(digerleri);
 
-// const user
+//
+const user = { ad: "seyma", yas: 23, sehir: "ankara" };
+const { ad, ...kalan } = user;
+console.log(ad);
+console.log(kalan);
+
+//-------------örnekler---------------
+
+const sayilar6 = [1, 2, 3, 4];
+const sayilar7 = [5, 6, 7, 8];
+
+const birlesik2 = [...sayilar6, ...sayilar7];
+console.log(birlesik2);
+
+//
+const user1 = { ad: "seyma", okul: "kto" };
+const ekBilgi = { sehir: "istanbul", tatli: "sütlac" };
+const profil = { ...user1, ...ekBilgi };
+
+console.log(profil);
