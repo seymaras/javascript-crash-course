@@ -1,5 +1,7 @@
 //map() bir dizinin her elemanını alır, üzerinde işlem yapar, ve size yeni bir dizi döner.
 
+const { c } = require("tar");
+
 const sayilar = [1, 2, 3, 4];
 
 const ikiKat = sayilar.map((sayi) => sayi * 2);
@@ -86,7 +88,8 @@ const ogrenciler3 = [
 ];
 
 const dersnotu = ogrenciler3.map((ogrenci) => {
-  return `Ad: ${ogrenci.ad}: ${ogrenci.puan >= 50 ? "gecti" : "kaldi"}`;
+  //   return `Ad: ${ogrenci.ad}: ${ogrenci.puan >= 50 ? "gecti" : "kaldi"}`;
+  return "Ad: " + ogrenci.ad + ": " + ogrenci.puan >= 50 ? "gecti" : "kaldi";
 });
 
 console.log(dersnotu);
@@ -98,3 +101,11 @@ const harfsayi = sehirler.map((harf) => {
   return `Sehir ad:${harf}(${harf.length})`;
 });
 console.log(harfsayi);
+
+//
+const sehirler2 = ["istanbul", "ankara", "konya"];
+
+const ilkharf = sehirler2.map((sehir) => {
+  return sehir[0].toLocaleUpperCase() + sehir.slice(1).toLocaleLowerCase();
+});
+console.log(ilkharf);
