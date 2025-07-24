@@ -9,6 +9,17 @@
     <div class="card-header">
       <h3 class="cart-title h1" id="title">Todo App 2</h3>
     </div>
+    <ul>
+      <li>
+        Görev 1
+      </li>
+      <li>
+        Görev 2
+      </li>
+      <li>
+        Görev 3
+      </li>
+    </ul>
     <script>
       let sonuc;
 
@@ -28,8 +39,13 @@
       document.getElementById("title").innerText = "Todo App";
       document.getElementById("title").innerHTML = "<p>Todo App</p>";
 
-      sonuc = document.querySelector("#title");
+      sonuc = document.querySelector("#title"); // #-id nokta ile de class
       sonuc = document.querySelector(".cart-header");
+      sonuc = document.querySelector("div");
+
+      sonuc = document.querySelector("li");
+      sonuc = document.querySelector("li:first-child");
+      sonuc = document.querySelector("li:last-child");
       console.log(sonuc);
     </script>
   </body>
