@@ -97,13 +97,11 @@
     <script>
       "use strict";
 
-      let gorevListesi = [
-        { id: 1, gorevAdi: "Görev 1", durum: "completed" },
-        { id: 2, gorevAdi: "Görev 2", durum: "pending" },
-        { id: 3, gorevAdi: "Görev 3", durum: "completed" },
-        { id: 4, gorevAdi: "Görev 4", durum: "pending" },
-        { id: 5, gorevAdi: "Görev 5", durum: "completed" },
-      ];
+      let gorevListesi = [];
+
+      if (localStorage.getItem("gorevListesi") !== null) {
+        gorevListesi = JSON.parse(localStorage.getItem("gorevListesi"));
+      }
 
       let editId;
       let isEditTask = false;
@@ -122,7 +120,7 @@
             let isChecked = gorev.durum === "completed" ? "checked" : "";
             let labelClass = gorev.durum === "completed" ? "checked" : "";
 
-            if (filter == gorev.durum || "all") {
+            if (filter == gorev.durum || filter == "all") {
             } else {
               continue;
             }
@@ -171,6 +169,7 @@
           gorevListesi.push({
             id: gorevListesi.length + 1,
             gorevAdi: taskInput.value,
+            durum: "pending",
           });
         } else {
           // Güncelleme
@@ -185,13 +184,15 @@
 
         taskInput.value = "";
         displayTasks(document.querySelector("span.active").id);
+        localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
       }
 
       function deleteTask(id) {
         let index = gorevListesi.findIndex((gorev) => gorev.id === id);
         if (index > -1) {
           gorevListesi.splice(index, 1);
-          displayTasks();
+          displayTasks(document.querySelector("span.active").id);
+          localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
         }
       }
 
@@ -206,6 +207,7 @@
       clearBtn.addEventListener("click", function() {
         gorevListesi = [];
         displayTasks(document.querySelector("span.active").id);
+        localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
       });
 
       function updateStatus(selectedTask) {
@@ -224,8 +226,9 @@
             gorev.durum = durum;
           }
         }
-        console.log(gorevListesi);
+
         displayTasks(document.querySelector("span.active").id);
+        localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
       }
       // Sayfa açıldığında mevcut görevleri göster
       displayTasks();
