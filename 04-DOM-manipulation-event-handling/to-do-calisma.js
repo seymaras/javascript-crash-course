@@ -12,7 +12,7 @@ form.addEventListener("submit", function(e) {
     const yeniGorev = document.createElement("li");
 
     yeniGorev.innerHTML = `
-      ${girilenGorev}
+      <span class="gorevMetni">${girilenGorev}</span>
       <button class="silBtn">Sil</button>
     `;
 
