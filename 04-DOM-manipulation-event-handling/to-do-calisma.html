@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Listesi</title>
+    <style>
+      .tamamlandi {
+        text-decoration: line-through;
+        color: gray;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Yapılacaklar Listesi</h1>
+    <form id="todoForm">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="Yeni bir görev ekleyin..."
+        required
+      />
+      <button type="submit">Ekle</button>
+    </form>
+    <ul id="todoList"></ul>
+    <script src="to-do-calisma.js"></script>
+  </body>
+</html>
