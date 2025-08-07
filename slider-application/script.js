@@ -26,41 +26,81 @@ var models = [
   },
 ];
 
-var index = 2;
-var slaytCount = models.length;
-document.querySelector(".fa-arrow-left").addEventListener("click", function() {
-  index--;
-  showSlide(index);
-  console.log(index);
+let index = 0;
+const slaytCount = models.length;
+
+const settings = {
+  duration: 2000,
+
+  random: false,
+};
+
+let prevIndex;
+let interval;
+
+// Sayfa tamamen yüklendiğinde başla
+document.addEventListener("DOMContentLoaded", function() {
+  showSlide(index); // ilk slide'ı göster
+  startSlideshow(settings); // otomatik başlat
+
+  // Butonlarla gezinme
+  document
+    .querySelector(".fa-arrow-left")
+    .addEventListener("click", function() {
+      index--;
+      showSlide(index);
+    });
+
+  document
+    .querySelector(".fa-arrow-right")
+    .addEventListener("click", function() {
+      index++;
+      showSlide(index);
+    });
 });
-document.querySelector(".fa-arrow-right").addEventListener("click", function() {
-  index++;
-  showSlide(index);
-  console.log(index);
+
+document.querySelectorAll(".arrow").forEach(function(item) {
+  item.addEventListener("mouseenter", function() {
+    clearInterval(interval);
+  });
 });
+
+document.querySelectorAll(".arrow").forEach(function(item) {
+  item.addEventListener("mouseleave", function() {
+    startSlideshow(settings);
+  });
+});
+
+function startSlideshow(settings) {
+  interval = setInterval(function() {
+    if (settings.random) {
+      let newIndex;
+      do {
+        newIndex = Math.floor(Math.random() * slaytCount);
+      } while (newIndex === prevIndex);
+      prevIndex = newIndex;
+      index = newIndex;
+    } else {
+      if (slaytCount == index + 1) {
+        index = -1;
+      }
+      showSlide(index);
+      index++;
+    }
+
+    showSlide(index);
+  }, settings.duration);
+}
+
 function showSlide(i) {
-  index = i;
-  if (i < 0) {
-    index = slaytCount - 1;
-  }
-  if (i >= slaytCount) {
-    index = 0;
-  }
-  if (i >= slaytCount) {
-    index = 0;
-  }
+  if (i < 0) index = slaytCount - 1;
+  else if (i >= slaytCount) index = 0;
+  else index = i;
 
+  // HTML elementlerini güncelle
   document.querySelector(".card-title").textContent = models[index].name;
-
   document
     .querySelector(".card-img-top")
     .setAttribute("src", models[index].image);
   document.querySelector(".card-link").setAttribute("href", models[index].link);
 }
-
-document.querySelector(".card-title").textContent = models[index].name;
-document
-  .querySelector(".card-img-top")
-  .setAttribute("src", models[index].image);
-
-document.querySelector(".card-link").setAttribute("href", models[index].link);
