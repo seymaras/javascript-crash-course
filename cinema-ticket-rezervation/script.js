@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const count = document.getElementById("count");
 const amount = document.getElementById("amount");
 const select = document.getElementById("movie");
+const seats = document.querySelectorAll(".seat:not(.reserved)");
 
 container.addEventListener("click", function(e) {
   if (
@@ -18,8 +19,23 @@ select.addEventListener("change", function(e) {
 });
 
 function calculateTotal() {
-  let selectedSeatCount = container.querySelectorAll(".seat.selected").length;
-  let price = select.value;
+  const selectedSeats = container.querySelectorAll(".seat.selected");
+
+  const seatsArr = [...seats];
+  const selectedSeatsArr = [...selectedSeats];
+
+  let selectedSeatIndexes = selectedSeatsArr.map((seat) =>
+    seatsArr.indexOf(seat)
+  );
+
+  let selectedSeatCount = selectedSeats.length;
   count.innerText = selectedSeatCount;
-  amount.innerText = selectedSeatCount * price;
+  amount.innerText = selectedSeatCount * select.value;
+
+  saveToLocalStorage(selectedSeatIndexes);
+}
+
+function saveToLocalStorage(indexes) {
+  localStorage.setItem("selectedSeats", JSON.stringify(indexes));
+  localStorage.setItem("selectedMovieIndex", select.selectedIndex);
 }
