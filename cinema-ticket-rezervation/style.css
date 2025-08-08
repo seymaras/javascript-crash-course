@@ -13,7 +13,7 @@ body{
     height:30px;
     width:30px;
     margin:4px;
-    border-radius: 12px
+    border-radius: 9px
 }
 .seat.selected{
     background-color: 	#ffa9db;
