@@ -14,27 +14,26 @@ keys.addEventListener("click", function(e) {
 
   if (!element.matches("button")) return;
 
-  if (element.classList.contains("operator")) {
-    //console.log("operator", element.value);
-    handleOperator(element.value);
-    updateDisplay();
-    return;
-  }
-  if (element.classList.contains("decimal")) {
-    inputDecimal(element.value);
-    //console.log("clear", element.value);
-    updateDisplay();
-    return;
+  const value = element.value;
+
+  switch (value) {
+    case "+":
+    case "-":
+    case "*":
+    case "/":
+    case "=":
+      handleOperator(value);
+      break;
+    case ".":
+      inputDecimal();
+      break; //
+    case "clear":
+      clear();
+      break;
+    default:
+      inputNumber(value);
   }
 
-  if (element.classList.contains("clear")) {
-    //console.log("clear", element.value);
-    clear();
-    updateDisplay();
-    return;
-  }
-  //console.log("number", element.value);
-  inputNumber(element.value);
   updateDisplay();
 });
 
