@@ -1,0 +1,76 @@
+/* Genel sayfa stilleri */
+body {
+    font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fef6e4, #e3f6f5, #fce7f3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* Uygulama kutusu */
+  div {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+  }
+  
+  /* Başlık */
+  h1 {
+    color: #ff80ab;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Buton */
+  button {
+    background: linear-gradient(45deg, #ffb3c6, #caffbf, #9bf6ff);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Buton disabled hali */
+  button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Kedi görseli */
+  #cat {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  #cat:hover {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  
+  /* Status mesajı */
+  #status {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
