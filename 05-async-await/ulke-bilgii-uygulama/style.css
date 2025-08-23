@@ -1,84 +1,130 @@
-*{
-    box-sizing:border-box;
-}
-body{
-    margin:0;
-    font-family: system-ui, -apple-system, Arial;
-    background-color: #FEF2F4;
-    color:#670D2F;
-}
-
-.app{
-    max-width:900px;
-    margin: 32px auto;
-    padding:0 16px;
-}
-
-h1{
-    margin:0 0 18px;
-}
-
-.row{
-    display:flex;
-    gap:8px;
-    margin-bottom:12px;
-}
-
-.row input {
-    flex:1;
-    padding: .7rem .9rem;
-    border:1px solid #FEF2F4;
-    border-radius: 10px;
-
-}
-
-.row button{
-    padding: .7rem 1rem;
-    border:none;
-    border-radius:10px;
-    background:#A53860;
-    color:#fff;
-    cursor:pointer;
-}
-
-.status{
-    min-height:24px;
-    margin: 8px 0 4px;
-    font-size: .95rem;
-}
-
-.status.ok{
-    color:#065f46;
-}
-
-.status.err{
-    color:#b91c1c;
-}
-
-.list {
-    list-style:none; 
-    padding:0; 
-    margin:8px 0 0;
-    display:grid; 
-    grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); 
-    gap:10px; }
-  .country {
-    display:flex;
-    align-items:center; 
-    gap:10px; 
-    padding:10px; 
-    border-radius:12px;
-    background:#fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.06); 
-    cursor:pointer;
+/* Genel sayfa stili */
+body {
+    font-family: "Segoe UI", "Comic Sans MS", sans-serif;
+    background: linear-gradient(135deg, #fef6e4, #e3f6f5, #fce7f3);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
   }
-  .country img { 
-    width:36px; 
-    height:24px; 
-    object-fit:cover; 
-    border-radius:4px; }
-  .country .meta { 
-    font-size:.9rem; 
-    color:#374151; }
   
-  .detail { margin-top: 16px; }
+  /* Ana uygulama kutusu */
+  .app {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Başlık */
+  h1 {
+    margin: 0 0 20px;
+    color: #ff80ab;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0 rgba(255, 128, 171, 0.2);
+  }
+  
+  /* Form düzeni */
+  .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input */
+  #c-query {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 2px solid #ffd6e8;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  #c-query:focus {
+    border-color: #ff80ab;
+  }
+  
+  /* Buton */
+  button {
+    background: linear-gradient(45deg, #ffb3c6, #caffbf, #9bf6ff);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Durum mesajı */
+  .status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Liste (ülke arama sonuçları) */
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    gap: 12px;
+  }
+  
+  .list li {
+    background: #fce7f3;
+    padding: 12px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  .list li:hover {
+    background: #ffb3c6;
+    transform: translateY(-2px);
+    color: white;
+  }
+  
+  /* Ülke detay kartı */
+  .detail {
+    background: #fff7fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .detail h2 {
+    margin-top: 0;
+    color: #ff80ab;
+  }
+  
+  .detail p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .detail img {
+    display: block;
+    margin: 15px auto 0;
+    max-width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
