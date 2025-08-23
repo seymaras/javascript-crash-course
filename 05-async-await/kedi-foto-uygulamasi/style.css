@@ -10,7 +10,7 @@ body {
   }
   
   /* Uygulama kutusu */
-  div {
+div {
     background: white;
     padding: 30px;
     border-radius: 20px;
@@ -20,14 +20,14 @@ body {
   }
   
   /* Başlık */
-  h1 {
+h1 {
     color: #ff80ab;
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
   
   /* Buton */
-  button {
+button {
     background: linear-gradient(45deg, #ffb3c6, #caffbf, #9bf6ff);
     border: none;
     padding: 12px 18px;
@@ -39,21 +39,21 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
   }
   
-  button:hover {
+button:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
   /* Buton disabled hali */
-  button:disabled {
+button:disabled {
     background: #ddd;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
   }
-  
+
   /* Kedi görseli */
-  #cat {
+#cat {
     margin-top: 20px;
     max-width: 100%;
     border-radius: 15px;
@@ -73,4 +73,40 @@ body {
     font-weight: bold;
     color: #555;
   }
+  #favorites {
+    background: #fff7fa;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  }
+
+  #favList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    margin-top: 15px;
+  }
   
+  #favList img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  #favList img:hover {
+    transform: scale(1.1);
+  }
+  #favBtn {
+    background: #ffb3c6;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  #favBtn:hover {
+    background: #ff80ab;
+  }
