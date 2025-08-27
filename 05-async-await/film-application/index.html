@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Uygulaması</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">🎬Watchiii</div>
+      <nav class="menu">
+        <a href="#">Anasayfa</a>
+        <a href="#">Dizi</a>
+        <a href="#">TV</a>
+        <a href="#">İletişim</a>
+      </nav>
+    </header>
+
+    <h1>🎬 Film Arama 🎬</h1>
+    <div class="search-bar">
+      <label for="query">Film adııı:</label>
+      <input type="text" id="query" placeholder="Film adını giriniz..." />
+      <button id="btn">Ara</button>
+    </div>
+
+    <p id="status"></p>
+
+    <div id="sonuc">
+      <ul id="list"></ul>
+      <div id="detail-container"></div>
+    </div>
+    <div id="overlay">
+      <div id="detail"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
